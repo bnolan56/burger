@@ -1,6 +1,6 @@
-<h5>Order a Burger</h5>
+<label>Order a Burger</label>
   <form action="/create" method="POST" class="button-size">
-    <select class="browser-default" name="burgerInput">
+    <select name="burgerInput">
       <option value="" disabled selected>Choose a burger</option>
 
       {{#each itm}}
@@ -14,9 +14,9 @@
     <button type="submit" class="waves-effect waves-light btn deep-purple lighten-1">Add to Order</button>
   </form>
 
-<h5>Add a Side</h5>
+<label>Add a Side</label>
   <form action="/create" method="POST" class="button-size">
-    <select class="browser-default" name="burgerInput">
+    <select name="burgerInput">
       <option value="" disabled selected>Choose a side</option>
 
       {{#each itm}}
