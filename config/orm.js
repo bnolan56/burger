@@ -1,6 +1,6 @@
 const connection = require('./connection.js');
 
-const orm = {
+let orm = {
   selectAll: function(tableName, callback) {
     let queryString = 'SELECT * FROM ' + tableName;
 

@@ -19,7 +19,7 @@ app.set('view engine', 'handlebars');
 
 // API Routes
 // =============================================================
-const routes = require('./controllers/burgers_controller.js');
+const routes = require('./controllers/burger_controller.js');
 app.use('/', routes);
 
 // Starts the server to begin listening

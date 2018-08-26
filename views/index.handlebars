@@ -1,0 +1,51 @@
+<div class="row">
+  <!-- Burgers REady -->
+  <div class="col l6 center-align">
+    <ul>
+      {{#each brgr}}
+        {{#unless this.devoured}}
+          <div class="card">
+            <p class="grey-text">
+              {{this.id}}. {{this.burger_name}}
+
+              <form action="update/{{this.id}}?_method=PUT" method="POST">
+                <input type="hidden" name="devoured" value="1">
+                <button type="submit" class="waves-effect waves-light btn green z-depth-4">DEVOUR IT!</button>
+              </form>
+
+            </p>
+          </div>
+        {{/unless}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <!-- Devoured Burgers -->
+    <div class="col l6 center-align">
+      <ul>
+        {{#each brgr}}
+          {{#if this.devoured}}
+            <div class="card">
+              <p class="grey-text">
+                {{this.id}}. {{this.burger_name}}
+
+                <form action="delete/{{this.id}}?_method=DELETE" method="POST">
+                  <button type="submit" class="waves-effect waves-light btn green z-depth-4">Remove</button>
+                </form>
+              </p>
+            </div>
+          {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="col l3"></div>
+  <div class="col l6">
+    <div class="card-panel center-align">
+    <!-- {takes menu.handlebars from partials and renders a drop down menu for menu -->
+      {{> menu/dropdown}}
+    </div>
+  </div>
+</div>
