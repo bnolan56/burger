@@ -25,4 +25,12 @@ app.use('/', routes);
 // Starts the server to begin listening
 // =============================================================
 const PORT = process.env.PORT || 3000;
-console.log("Application Listening on " + PORT);
+
+app.listen(PORT, function (error, response) {
+    if (error) {
+        console.log(error);
+    }
+    console.log(`Application listening on ${PORT}`);
+})
+
+// console.log("Application Listening on " + PORT);
