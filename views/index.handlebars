@@ -1,6 +1,7 @@
 <div class="row">
   <!-- Burgers REady -->
   <div class="col l6 center-align">
+    <h2>Your Order:</h2>
     <ul>
       {{#each brgr}}
         {{#unless this.devoured}}
@@ -10,7 +11,7 @@
 
               <form action="update/{{this.id}}?_method=PUT" method="POST">
                 <input type="hidden" name="devoured" value="1">
-                <button type="submit" class="waves-effect waves-light btn green z-depth-4">DEVOUR IT!</button>
+                <button type="submit" class="waves-effect waves-light btn green">Munch Away</button>
               </form>
 
             </p>
@@ -22,6 +23,7 @@
 
   <!-- Devoured Burgers -->
     <div class="col l6 center-align">
+      <h2>Crushed Food:</h2>
       <ul>
         {{#each brgr}}
           {{#if this.devoured}}
@@ -30,7 +32,7 @@
                 {{this.id}}. {{this.burger_name}}
 
                 <form action="delete/{{this.id}}?_method=DELETE" method="POST">
-                  <button type="submit" class="waves-effect waves-light btn green z-depth-4">Remove</button>
+                  <button type="submit" class="waves-effect waves-light btn green">Take Plates Away</button>
                 </form>
               </p>
             </div>
