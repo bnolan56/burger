@@ -2,10 +2,10 @@
   <div class="col l3"></div>
   <div class="col l6">
     <ul class="card center-align">
-      <h5>Burgers</h5>
+      <h5 class="card-title">Burgers</h5>
         {{#each itm}}
           {{#if this.entree}}
-              <p>
+              <p class="card-content">
                 {{this.id}}. {{this.item}}
               </p>
           {{/if}}
@@ -18,10 +18,10 @@
   <div class="col l3"></div>
   <div class="col l6">
     <ul class="card center-align">
-      <h5>Sides</h5>
+      <h5 class="card-title">Sides</h5>
         {{#each itm}}
           {{#unless entree}}
-              <p>
+              <p class="card-content">
                 {{this.id}}. {{this.item}}
               </p>
           {{/unless}}
