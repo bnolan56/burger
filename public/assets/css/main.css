@@ -1,7 +1,14 @@
+body {
+  background-image: url("assets/images/burger-bg.png");
+}
+
 /*** Typography ***/
+h5, p {
+  font-family: 'Catamaran', sans-serif;
+}
 
 nav {
-  font-family: 'Righteous', sans-serif;
+  font-family: 'Righteous', cursive;
 }
 
 /*** Buttons ***/
