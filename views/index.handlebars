@@ -1,7 +1,7 @@
 <div class="row">
   <!-- Burgers REady -->
   <div class="col l6 center-align">
-    <h2>Your Order:</h2>
+    <h5>Your Order:</h5>
     <ul>
       {{#each brgr}}
         {{#unless this.devoured}}
@@ -23,7 +23,7 @@
 
   <!-- Devoured Burgers -->
     <div class="col l6 center-align">
-      <h2>Crushed Food:</h2>
+      <h5>Crushed Food:</h5>
       <ul>
         {{#each brgr}}
           {{#if this.devoured}}
