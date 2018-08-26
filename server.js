@@ -24,5 +24,5 @@ app.use('/', routes);
 
 // Starts the server to begin listening
 // =============================================================
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3306;
 app.listen(`Application Listening on + ${PORT}`);
